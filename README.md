@@ -1,2 +1,0 @@
-# Socotra
-project website

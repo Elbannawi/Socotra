@@ -1,0 +1,919 @@
+<!DOCTYPE html>
+<html>
+    <head>
+      <title> SOCOTRA</title>
+       <meta http-equiv="refresh" content="3">
+      <link rel="stylesheet" type="text/css" href="main.css">
+      <link href="https://fonts.googleapis.com/css2?family=Roboto:ital@0;1&display=swap">
+      <script src="https://kit.fontawesome.com/83f1416b5b.js" crossorigin="anonymous"></script>
+      <style>
+        .header{
+      
+  font-family:inhert;
+        font-size:3.1em;
+        font-weight:bold;
+        text-align:center;
+        line-height:1.1em;
+
+ /* background-attachment: fixed; */
+           padding: 0.2em;
+           margin:0.1em;
+           position:relative;      
+           isolation:isolate}
+.header::after{content:'';
+            position:absolute;
+            background:white;
+            inset:0;
+            z-index:-1;
+            opacity:.2;}
+
+nav{background-color:#D6D6D6;
+        font-family:serif;
+        
+  display:flex;
+  
+        font-weight:bold;
+        text-align:center;
+        line-height:1.3;
+  justify-content:space-around;
+        text-decoration:none;
+  margin:auto;
+        box-sizing:border-box;}
+
+.link{text-decoration:none;
+   position:relative;
+  color:black;
+  font-size:1em;
+  text-transform:capitalize;
+  color:#363237;
+ webkit-transition:0.3s;
+  -moz-transition:0.3s;
+  -ms-transition:0.3s;
+  -o-transition:0.3s;
+  padding:0 10px;}
+
+.link::before{content:'';
+            position:absolute;
+            right:0;
+            height:2px;
+            width:0%;
+  background-color:#E796C3;
+  bottom:0px;
+  transition:0.3s;
+  webkit-transition:0.3s;
+  -moz-transition:0.3s;
+  -ms-transition:0.3s;
+  -o-transition:0.3s;}
+.link:hover{color:#010001;}
+.link:hover::before{
+         width:100%;
+}
+
+#header1{font-family:fantasy;
+        font-size:5.4em;
+        font-weight:bold;
+        text-align:center;
+        line-height:0.9;
+        text-decoration:none;
+  margin:15px;}
+  
+.header2
+{
+        font-family:fantasy;
+        font-size:2.5em;
+        font-weight:bold;
+        text-align:left;
+        line-height:1em;
+        text-decoration:none;
+  margin:20px;
+ /* background-attachment: fixed; */
+           padding: 0.2em;
+           margin:0.1em;
+           min-height: 0.1em;
+           position:relative;      
+           isolation:isolate}
+.header2::after{content:'';
+            position:absolute;
+            background:#E796C3;
+            inset:0;
+            z-index:-1;
+            opacity:.7;
+  width: 28%;}
+h3{font-family:fantasy;
+        font-size:1.1em;
+        font-weight:bold;
+        text-align:left;
+        line-height:0.7em;
+        text-decoration:none;
+  margin:10px;
+ /* background-attachment: fixed; */
+           padding: 0.2em;
+           margin:0.1em;
+           min-height: 0.1em;
+           position:relative;      
+           isolation:isolate}
+h3::after{content:'';
+            position:absolute;
+            background:#E796C3;
+            inset:0;
+            z-index:-1;
+            opacity:.7;}
+h4{
+        font-family:inherit;
+        color:#E3C4EB;
+        font-size:1.4em;
+        font-weight:bold;
+        text-align:center;
+        line-height:1em;
+        text-decoration:none;
+         
+  margin:20px;
+ /* background-attachment: fixed; */
+           padding: 0.2em;
+           margin:0.1em;
+           min-height: 0.1em;
+           position:relative;      
+           isolation:isolate}
+h4::after{content:'';
+            position:absolute;
+            background:#1D1D1D;
+            inset:0;
+            z-index:-1;
+            opacity:.8;
+  width: 70%;
+       background-align:center;
+}
+#the-is-land{color:black;
+        /* background-attachment: fixed; */
+           padding: 1rem;
+           margin:25px;
+           min-height: 20vh;
+           position:relative;      
+           isolation:isolate;
+            width: 65%;
+            height:415px;
+            overflow-y: auto;
+  overflow-x: hidden;
+  font-size:17px;}
+
+#the-is-land::after{
+            content:'';
+            position:absolute;
+            background:white;
+            inset:0;
+            z-index:-1;
+            opacity:.7;
+  padding:100px;}}
+
+      #nice-tree{ width: 100px;
+            margin-right:50; }
+      body{background-image:url(https://i.postimg.cc/hGNd7RGb/kordan-1.jpg);
+           background-repeat:no-repeat;
+           background-attachment:fixed;  
+           background-position:bottom;
+           background-size:cover;
+        /* background-attachment: fixed; */
+           padding: 1rem;
+           margin:0.2em;
+           min-height: 20vh;
+           position:relative;      
+           isolation:isolate;
+}
+body::after{
+            content:'';
+            position:absolute;
+            background:black;
+            inset:0;
+            z-index:-1;
+            opacity:.4;
+           }
+.images{
+        margin:0px;
+        padding:0px;
+        display:flex;
+        height:95vh;
+        justify-content:center;
+        align-items:center;
+  background:#3D2742;
+border-radius:10px}
+          
+
+.slider{width:800px;
+        height:500px;
+       overflow:hidden; 
+  border-radius:10px}
+.slides{width:500px;
+        height:500px;
+        display:flex;}
+.slides input{display:none;}
+.slide{
+       width:20%;
+        transition:2s;
+}
+.slide img{width:800px;
+        height:500px;}
+
+ /* css for manual slide navigation */
+.navigation-manual{ position:relative;
+                   width:800px;
+                   margin-top:-40px;
+                   display:flex;
+                   justify-content:center;
+}
+.manual-btn{border: 3px solid #BAA6A6;
+            padding:5px;
+            border-radius:10px;
+            cursor:pointer;
+            transition:1s;
+             }
+.manual-btn:not(:last-child){
+             margin-right:40px;      
+}
+.manual-btn:hover{background:#3D2742;
+}
+#radio1:checked~ .first{margin-left= 0;}
+#radio2:checked~ .first{margin-left= -20%;}
+#radio3:checked~ .first{margin-left= -40%;}
+#radio4:checked~ .first{margin-left= -60%;}
+#radio5:checked~ .first{margin-left= -80%;}
+#radio6:checked~ .first{margin-left= -100%;}
+#radio7:checked~ .first{margin-left= -120%;}
+
+/* css for automatic navigation */
+.navigation-auto { position:absolute;
+                   display:flex;
+                   width:800px;
+                   justify-content:center;
+                    margin-top:460px}
+.navigation-auto div{border: 2px solid #3D2742;
+                     padding:5px;
+                     border-radius:10px;
+                     transition:1s;
+}
+.navigation-auto div:not(:last-child){margin-right:40px;
+                                      }
+#radio1:checked ~ .navigation-auto .auto-btn1{background:#3D2742;}
+#radio2:checked ~ .navigation-auto .auto-btn2{background:#3D2742;}
+#radio3:checked ~ .navigation-auto .auto-btn3{background:#3D2742;}
+#radio4:checked ~ .navigation-auto .auto-btn4{background:#3D2742;}
+#radio5:checked ~ .navigation-auto .auto-btn5{background:#3D2742;}
+#radio6:checked ~ .navigation-auto .auto-btn6{background:#3D2742;}
+#radio7:checked ~ .navigation-auto .auto-btn7{background:#3D2742;}
+
+.links  {text-decoration:none;
+  color:black;
+  text-decoration:none;
+   position:relative;
+  color:black;
+  font-size:1em;
+  text-transform:capitalize;
+  color:#363237;
+ webkit-transition:0.3s;
+  -moz-transition:0.3s;
+  -ms-transition:0.3s;
+  -o-transition:0.3s;
+  padding:0 10px;}
+.links::before{
+  content:'';
+            position:absolute;
+            right:0;
+            height:2px;
+            width:0%;
+  background-color:#E796C3;
+  top:0px;
+  transition:0.3s;
+  webkit-transition:0.3s;
+  -moz-transition:0.3s;
+  -ms-transition:0.3s;
+  -o-transition:0.3s;}
+.links:hover{color:#010001;}
+.links:hover::before{
+         width:100%;
+}
+.linkss  {text-decoration:underline;
+  color:black;font-family:inherit;   font-weight:bold;}
+.links1  {text-decoration:underline;
+  color:white;font-family:inherit;   font-weight:bold;}
+#socotra{color:#022C1C;
+  font-size:2em;
+         font-family:Georgia;
+}
+#socotra1{color:#C874F7;
+  font-size:1.5em;
+         font-family:Georgia;
+}
+#container{color:#F5E4FF;
+        /* background-attachment: fixed; */
+           padding: 1rem;
+            margin:25px;
+           min-height: 20vh;
+           position:relative;      
+           isolation:isolate;
+            width: 75%;
+            height:340px;
+            overflow-y: auto;
+  overflow-x: hidden;
+  font-size:22px;}
+#container::after{
+            content:'';
+            position:absolute;
+            background:black;
+            inset:0;
+            z-index:-1;
+            opacity:.3;
+  padding:100px;}
+#headers{background-color:#D6D6D6;
+        font-family:serif;
+        font-size:1.3em;
+        font-weight:bold;
+        text-align:center;
+        line-height:1.5;
+        text-decoration:none;
+  position:relative;
+  margin-left:175px;
+    width:70%;}
+#gi1{background-color:#D6D6D6;
+        width: 60%;
+   border: 3px solid #black;
+        position:relative;
+        right:-7em;
+        font-family:serif;
+        font-size:0.9em;
+        font-weight:bold;
+        text-align:center;
+        line-height:1.2;
+        text-decoration:none;
+}
+
+#see-do-p{color:white;
+        /* background-attachment: fixed; */
+           padding: 1rem;
+           right:-37em;
+           min-height: 20vh;
+           position:relative;      
+           isolation:isolate;
+            width: 40%;
+            height: 249px;
+            overflow-y: auto;
+  overflow-x: hidden;}
+         
+#see-do-p::after{
+            content:'';
+            position:absolute;
+            background:black;
+            inset:0;
+            z-index:-1;
+            opacity:.5;
+  padding:100px;}
+    #do-pic1{width:495px;
+            position:absolute;
+            border: 3px solid #5F4764; top:145.5em;em;
+    right:44em;
+    opacity:.8;
+    height:290px;
+}
+
+
+#htgt-p{color:white;
+        /* background-attachment: fixed; */
+           padding: 1rem;
+           right:-22em;
+           min-height: 20vh;
+           position:relative;      
+           isolation:isolate;
+            width: 40%;
+            height:168px;
+            overflow-y: auto;
+  overflow-x: hidden;}
+#htgt-p::after{
+            content:'';
+            position:absolute;
+            background:black;
+            inset:0;
+            z-index:-1;
+            opacity:.5;
+  padding:100px;}
+
+      #htgt-pic1{width:300px;
+            position:absolute;
+         border: 3px solid #5F4764;
+            top:169.5em;
+    right:59em;
+    opacity:.9;
+    height:200px;
+}
+ #htgt-pic2
+{width:300px;
+            position:absolute;
+   border: 3px solid #5F4764;
+            top:169.5em;
+    right:3em;
+    opacity:.9;
+    height:200px;
+}
+
+
+
+         
+
+    
+  #stay-pic1{width:450px;
+            position:absolute;
+     border: 3px solid #5F4764;
+            top:186em;
+    right:15em;
+    opacity:.9;
+    height:270px;}
+#stay-p{color:white;
+        /* background-attachment: fixed; */
+           padding: 1rem;
+           margin:0.2em;
+           min-height: 20vh;
+           position:relative;      
+           isolation:isolate;
+            width: 40%;
+            height: 230px;
+            overflow-y: auto;
+  overflow-x: hidden;}
+         
+#stay-p::after{
+            content:'';
+            position:absolute;
+            background:black;
+            inset:0;
+            z-index:-1;
+            opacity:.5;
+  padding:100px;}
+#events-p{background-color:#D6D6D6;
+        font-family:serif;
+        font-size:2.1em;
+        font-weight:bold;
+        text-align:center;
+        line-height:1.9;
+        text-decoration:none;
+  margin:10px;}
+
+      .container1{
+         width: 80%;
+        font-family: 'Roboto', sans-serif;
+          margin: 50px auto;}
+         .contact-box{
+           background:  #EADBEE;
+            display: flex;}
+        .contact-left{
+             flex-basis: 60%;
+          padding: 40px 60px;}
+
+     .contact-right{
+               flex-basis:40%;
+               padding:40px;
+               background:#370044;
+               color:#fff;
+}
+         h5{
+           margin-bottom:10px;
+}
+.container1 p{font-family:inherit;
+        color:#E3C4EB;
+        font-size:1.4em;
+        font-weight:bold;
+        text-align:center;
+        line-height:1em;
+        text-decoration:none;
+         
+  margin:20px;
+ /* background-attachment: fixed; */
+           padding: 0.2em;
+           margin:0.1em;
+           min-height: 0.1em;
+           position:relative;      
+  isolation:isolate}
+.container1 p::after
+{content:'';
+            position:absolute;
+            background:#1D1D1D;
+            inset:0;
+            z-index:-1;
+            opacity:.8;
+  width: 100%;
+background-align:center}
+
+.input-row{
+display: flex;
+justify-content:space-between;
+margin-bottom: 20px;
+}
+.input-row . input-group{
+  flex-basis: 45%;}
+input {
+width: 100%;
+border: none;
+border-bottom: 1px. solid black;
+outline: none;
+padding-bottom: 5px;
+}
+textarea{
+     width:100%;
+     padding:10px;
+      border:1px solid #ccc;
+        out line:none;
+}
+label{
+  margin-bottom:6px;
+  display:block;
+    color;1c00b5
+}
+h5{
+        font-family:fantasy;
+        font-size:1.5em;
+       
+        text-align:center;
+        line-height:1em;
+        text-decoration:none;
+  margin:20px;
+ /* background-attachment: fixed; */
+           padding: 0.2em;
+           margin:0.1em;
+           min-height: 0.1em;
+           position:relative;      
+           isolation:isolate}
+h5::after{content:'';
+            position:absolute;
+            background:#E796C3;
+            inset:0;
+            z-index:-1;
+            opacity:.7;
+  width: 80%;}
+button{
+       background:#291E2C;
+       color: white;
+       width:60%;
+  border:none;
+  out line:none;
+  height:40px;
+  border-radius:30px;
+  margin-top:20px;
+  box-shadow:0px 5px 15px 0px rgba(82,0,181,0,3);
+  
+}
+.contact-left h6{color:#F2D2F9;
+font-weight:600;
+margin-bottom:30px;}
+
+
+tr rd:first-child{
+  padding-right:35px;}
+ tr rd:first-child{
+    padding-top:70px;}
+
+.footer{margin-top:150px;
+  width:98%;
+  padding:50px 1%;
+  background:#3D2742;
+  color:#efefef;
+   
+display:flex;}
+
+.footer div{
+  text-align:center;
+}
+.col-3 a{text-decoration:none;
+  color:black;
+  text-decoration:none;
+   position:relative;
+  color:black;
+  font-size:1em;
+  text-transform:capitalize;
+  color:#FBEBFF;
+ webkit-transition:0.3s;
+  -moz-transition:0.3s;
+  -ms-transition:0.3s;
+  -o-transition:0.3s;
+  padding:0 10px;}
+.col-3 a::before{
+  content:'';
+            position:absolute;
+            right:0;
+            height:2px;
+            width:0%;
+  background-color:#E796C3;
+  bottom:0px;
+  transition:0.3s;
+  webkit-transition:0.3s;
+  -moz-transition:0.3s;
+  -ms-transition:0.3s;
+  -o-transition:0.3s;}
+.col-3 a:hover{color:#FEFDFF;}
+.col-3 a:hover::before{
+         width:100%;}
+form input{
+  width:300px;
+  height:35px;
+  border-radius:10px;
+  text-align:center;
+  margin-top:20px;
+  margin-bottom:40px;
+  outline:none;
+  border:none;
+}
+#footer-socotra{
+        font-family:math;
+        font-size:2em;
+        font-weight:bold;
+        text-align:left;
+        line-height:10%;
+        margin-top:12px
+        border:solid ccc 10px;}
+#nw{
+        font-family:math;
+        font-size:2em;
+        font-weight:bold;
+        text-align:center;
+    
+        margin-top:10px;
+        border:solid ccc 10px;}
+#footer-socotra{
+        font-family:math;
+        font-size:2em;
+        font-weight:bold;
+        text-align:left;
+        line-height:10%;
+        margin-top:12px
+        border:solid ccc 10px;}
+#src{
+        font-family:math;
+        font-size:2em;
+        font-weight:bold;
+        text-align:center;
+    
+        margin-top:10px;
+        border:solid ccc 10px;}
+      </style>
+  </head>
+  <body>
+    <header>
+      <h1 class="header"><a style="text-decoration:none; color:#000100;" target="_blank" href="https://en.wikipedia.org/wiki/Socotra">SOCOTRA</a><h1>
+        
+                                 
+                               <h2>
+                                 <nav>
+                                    <a class="link" href="#header1">Home</a>
+                                    <a class="link" href="#theisland">The Island</a>
+                                    <a class="link" href="#gi">General informations</a>
+                                    <a class="link" href="#See-Do">See&Do</a></li>
+                                    <a class="link" href="#How">How to get there</a>
+                                    <a class="link" href="#stay">stay</a>
+                                    <a class="link" href="#events">Events</a>
+                                    <a class="link" href="#Contact">Contact us</a>
+                                 </nav>
+                               </h2>  
+      </header>
+      <main>
+        <h3 id ="header1">A JOURNEY TO THE END OF THE WORLD</h3>
+       
+        
+        
+        <div id="container">
+                                 <p><strong>The<span id="socotra1"> Socotra</span> Archipelago in Yemen has long been a land of mystery.</strong><br>
+Over the centuries travellers returned from the Indian Ocean isles with bizarre tales – of trees yielding dragon’s blood and cucumbers, forest of frankincense, and towering pinnacles in the mist.<br> Now a fuller picture has emerged of the four semi-desert islands, portraying a rich and unique flora and fauna with over a third of plants found nowhere else in the world, a diverse landscape of plateau, plain and mountain, all safeguarded by a people living sustainably in a challenging environment”.<br>
+      Socotra is one of the most isolated landforms on Earth of continental origin, meaning it is non-volcanic but a fragment of the ancient southern supercontinent of Gondwana.<br></p></div>
+        
+             <h3 class="header2" id="theisland">The Island</h3>
+               <div id="the-is-land"> <p> <strong>The <span id="socotra">Socotra</span></strong> Archipelago lies in the Indian Ocean between the Arabian Peninsula and the Horn of Africa being located some 240km east of Cap Guardafui (Somalia) and some 380km south of Ras Fartak, (Al Mahrah, Yemen).<br>
+
+Along with its neighbouring islands: Abd Al-Kuri, Samha and Darsa, it forms the Socotra Archipelago: one of the most bothanically diverse island groups in the world.<br>
+
+Socotra is globally important for biodiversity conservation because of its exceptionally rich and distinct flora and fauna. It is home to 825 plant species of which 308 (37%) are endemic. These species are found nowhere else on Earth.<br>
+UNESCO designated Socotra as a World Heritage Site in 2008.<br>
+It’s no wonder why Socotra is often called “Galapagos of the Indian Ocean”.<br>
+
+The island measures approximately 132km long and 49km wide with a total area of 3796 sq. kms. Topographically it can be divided into three main zones: the coastal plains, a limestone plateau and the Hagghier mountains.
+It has a semi-desert climate with average temperature over 25 degrees.
+Yearly rainfall is light, with the higher inland areas generally receiving more rain than the coastal lowlands, due to orographic lift provided by the interior mountains.
+The June to September monsoon season is characterized by exceedingly strong winds and high seas. During this time the island has historically been cut off from the rest of the world, only recently becoming being accessible by plane year round.<br>
+<br><p></div>
+        
+        <hr>
+                                 
+           <h3 class="header2" id="gi">Genral Informations</h3>
+                                <p id="headers">
+                                  <a class="links" href="#Geography">Geography</a>
+              &nbsp; &nbsp; &nbsp;<a class="links" href="#Etymology">Etymology</a>
+              &nbsp; &nbsp; &nbsp;<a class="links" href="#History">History</a>
+      
+              &nbsp; &nbsp; &nbsp;<a class="links" href="#Flora-fauna">Flora&fauna</a>
+            
+              &nbsp; &nbsp; &nbsp;<a class="links" href="#Language-Religion">Language&Religion</a></p>
+                                 
+                              <h4 id="Geography" >Geography</h4>             
+                                   <div id="gi1"><p1 >Socotra is one of the most isolated landforms on Earth of continental origin (i.e. not of volcanic origin).<br> The archipelago was once part of the supercontinent of Gondwana and detached during the Miocene epoch, in the same set of rifting events that opened the Gulf of Aden to its northwest.<br></p1></div>
+         <h4> Etymology</h4>
+            <div id="gi1"><p1 id="Etymology">Scholars don't agree about the origin of the name of the island. After that the name Socotra may derive from:
+<ul>
+              <li>A Greek name that is derived from the name of a South Arabian tribe mentioned in Sabaic and Ḥaḑramitic inscriptions as Dhū-Śakūrid (S³krd).<br></li>
+  <li>The Sanskrit "Dvīpa Sukhadara" which means "island of bliss".<br></li>
+<li>The Arabian terms Suq, market, and qutra, a vulgar form of qatir, which refers to dragon's blood.</li><br></p1></div>
+              
+             <h4 id="History">History</h4>
+               <div id="gi1"><p1>There was initially an Oldowan lithic culture in Socotra. Oldowan stone tools were found in the area around Hadibo in 2008.[13]
+
+Soqotra played an important role in the ancient international trade and appears as Dioskouridou (Διοσκουρίδου νῆσος), meaning "the island of the Dioscuri" in the Periplus of the Erythraean Sea, a first-century CE Greek navigation aid.<br> <a class="links" target="_blank" href=:="https://en.wikipedia.org/wiki/Socotra#History">Read more about Socotra history</a></p1></div>
+               <h4 id="Climate">Climate</h4>
+                 <div id="gi1"><p1>The climate of Socotra is classified in the Köppen climate classification as BWh and BSh, meaning a transitional hot desert climate and a semi-desert climate with a mean annual temperature over 25 °C (77 °F). Yearly rainfall is light but is fairly spread throughout the year.<br> Due to orographic lift provided by the interior mountains, especially during the northeast monsoon from October to December, the highest inland areas can average as much as 800 millimetres (31.50 in) per year and can receive over 250 millimetres (9.84 in) in a month during November and December.<br><a class="linkss" target="_blank" href=:="https://en.wikipedia.org/wiki/Socotra#Climate">Read more about Socotra Climate</a></p1></div>
+                <h4 id="Flora-fauna">Flora&fauna</h4>
+               <div id="gi1">  <p1>Socotra is considered the jewel of biodiversity in the Arabian Sea.[44] In the 1990s, a team of United Nations biologists conducted a survey of the archipelago's flora and fauna. They counted nearly 700 endemic species, found nowhere else on earth; only New Zealand,[45] Hawaii, New Caledonia, and the Galápagos Islands have more impressive numbers.<br><a class="linkss" target="_blank" href=:="https://en.wikipedia.org/wiki/Socotra#Flora_and_fauna">Read more about Socotra's Flora&fauna</a></p1></div>
+              
+                  <h4 id="Language-Religion">Language&Religion</h4>
+              <div id="gi1"><p1><strong> Soqotri language</strong>
+The island is home to the Semitic language Soqotri, which is related to such other Modern South Arabian languages on the Arabian mainland as Mehri, Harsusi, Bathari, Shehri, and Hobyot, which became the subject of European academic study in the nineteenth century.[60][61]
+
+There is an ancient tradition of poetry and a poetry competition is held annually on the island.[62] The first attested Socotran poet is thought to be the ninth-century Fatima al-Suqutriyya, a popular figure in Socotran culture, Socotra Swahili is extinct.
+        <br><a class="linkss" target="_blank" href=:="https://en.wikipedia.org/wiki/Socotra#Language">Read more about Socotra's Language&Religion</a></p1></div>
+                    <hr>
+                    <h3 class="header2" id="See-Do">See&Do</h3>
+                   <p id ="see-do-p"> So you want to travel to Socotra Island (sometimes spelled Soqotra)? That’s not surprising considering the insane amount of natural beauty and biodiversity<br>
+
+This largely undisturbed island getaway is the absolute perfect destination for a nature escape.<br>
+
+Over 1/3 of all the plant species in Socotra can’t be found anywhere else on earth!<br>
+
+Yes, you read that right, over 1/3 of the plant species are endemic to Socotra only.<br>
+
+There are a lot of places with unique biodiversity, but Socotra has plants that are so unique that it’s been described as a “tropical alien planet.” Now tell me, who wouldn’t want to visit a tropical alien planet?<br><a class="links1" target="_blank" href="https://www.avenlylanetravel.com/things-to-do-in-socotra/">Read more about 18 INCREDIBLE THINGS TO DO IN SOCOTRA
+</a><br><p>   <img src="https://images.unsplash.com/photo-1642425149556-b6f90e946859?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=870&q=80" alt="Dragon-tree" id="do-pic1"> 
+                   
+              
+              <hr>
+              
+                   <h3 class="header2" id="How">How to get there</h3>
+                    <p id ="htgt-p">Public transport on Socotra is limited to a few minibuses; car hire usually means hiring a 4WD car and a driver.<br>
+Transport is a delicate matter on Socotra as road construction is considered locally to be detrimental to the island and its ecosystem. In particular, damage has occurred via chemical pollution from road construction while new roads have resulted in habitat fragmentation.<br><a class="links1" target="_blank" href=:="https://en.wikipedia.org/wiki/Socotra#Transport">Read more about Socotra's transport.</a></p><img src="https://images.unsplash.com/photo-1572569403915-b5e8b6317396?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=870&q=80" alt="tent" id="htgt-pic1"> <img src="https://images.unsplash.com/photo-1642425146609-6c8ff4589d18?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1032&q=80" alt="tent" id="htgt-pic2">
+    
+                    <hr>
+                    <h3 class="header2" id="stay">Stay</h3>
+                    <p id ="stay-p">Every night we pitch the tents in a different location. We’ve chosen the most spectacular corners of the island for you to make unforgettable memories, while ensuring that your journey is as comfortable as possible.<br>
+We are the only agency that provides you with all necessary camping equipment: personal tent, mattress, bed-sheet, blanket, pillow and pillow case.<br>
+Every day you’ll be able to wash yourself with fresh water using our portable pressured solar showers. At each campsite we set up a Gazebo with tables and chairs.<br>
+After sunset we light a fire that is surrounded by carpets and pillows to relax together.<br>
+This is definitely the best way to embrace nature! <br></p>
+                                                        <img src=" https://www.welcometosocotra.com/wp-content/uploads/2020/12/1.jpeg" alt="tent" id="stay-pic1"><br>
+              
+              
+                <hr>
+              
+              <section class="images">                  
+                       <!--image slider start-->    
+               <div class="slider">
+                 <div class="slides">
+                   <!--radio button start-->
+                   <inbut type="radio" name="radio-btn" id="radio1">
+                   <inbut type="radio" name="radio-btn" id="radio2">
+                   <inbut type="radio" name="radio-btn" id="radio3">
+                   <inbut type="radio" name="radio-btn" id="radio4">
+                   <inbut type="radio" name="radio-btn" id="radio5">
+                   <inbut type="radio" name="radio-btn" id="radio6">
+                   <inbut type="radio" name="radio-btn" id="radio7">
+                   <!--radio button end-->
+                    <!--slide image start--> 
+                      <div class="slide first">
+                        <img src="https://i.postimg.cc/Kv58DZVG/owl126-60d15f148ab8d-880.jpg" alt"">
+                     </div>
+                        <div class="slide">
+                         <img src="https://i.postimg.cc/nLG2H9w8/owl079-60d15bfac5aaa-880.jpg" alt""> 
+                     </div>
+                        <div class="slide">
+                         <img src="https://i.postimg.cc/RVwP00FT/owl078-60d15c252a1fd-jpeg-880.jpg" alt""> 
+                     </div>
+                        <div class="slide">
+                         <img src="https://i.postimg.cc/jSshdQBs/owl075-60d15fb38c82b-jpeg-880.jpg" alt""> 
+                     </div>
+                        <div class="slide">
+                         <img src="https://i.postimg.cc/prfDPpZh/owl065-60d15d1354a1e-880.jpg" alt""> 
+                     </div>
+                        <div class="slide">
+                         <img src="https://i.postimg.cc/CxLjVMf5/owl057-60d15fc786042-880.jpg" alt""> 
+                     </div>
+                        <div class="slide">
+                         <img src="https://i.postimg.cc/d1MkDJD8/owl010-60d15b6b0c95c-880.jpg" alt""> 
+                     </div>
+                      <!--slide image end--> 
+                   <!--automatic navigation start -->
+                     <div class="automatic-navigation">
+                       <div class="navigation-btn1"> </div>
+                       <div class="navigation-btn2"> </div>
+                       <div class="navigation-btn3"> </div>
+                       <div class="navigation-btn4"> </div>
+                       <div class="navigation-btn5"> </div>
+                       <div class="navigation-btn6"> </div>
+                       <div class="navigation-btn7"> </div>
+                     </div>  
+                    <!--automatic navigation end -->
+                   </div>
+                     <!--manual navigation start-->
+                       <div class="navigation-manual">
+                         <label for"radio1" class="manual-btn"></label>
+                         <label for"radio2" class="manual-btn"></label>
+                         <label for"radio3" class="manual-btn"></label>
+                         <label for"radio4" class="manual-btn"></label>
+                         <label for"radio5" class="manual-btn"></label>
+                         <label for"radio6" class="manual-btn"></label>
+                         <label for"radio7" class="manual-btn"></label>
+                       </div>
+                     <!--manual navigation end -->
+                 </div>
+                <!--image slider end-->
+                 </section>
+                     <br>
+                     
+                  <hr>
+ 
+                    <h3 class="header2" id="events">Events</h3>
+                <br>
+                <br>
+                <br>
+              
+              <p id ="events-p">Informations will be available soon,</p>
+              
+              <br>
+              <hr>
+                    
+              
+                    <h3 class="header2" id="Contact">Contact us</h3>
+              <div class="container1">
+                <h5>Connect With Us</h5>
+                <p>We would love to respond to your queries and help you succeed. Feel free to get in touch with us.</p>
+                <div class="contact-box">
+                  <div class="contact-left">
+                    Send your request
+                    <form>
+                      <div class="input-row">
+                        <div class="input-groub">
+                          <label>Name</label> <input type="text" placeholder="Mohammed">
+                        </div>
+                        <div class="input-groub">
+                          <label>Phone</label> <input type="text" placeholder="0684172712">
+                        </div>
+                      </div>
+                      <div class="input-row">
+                        <div class="input-groub">
+                          <label>E-mail</label> <input type="text" placeholder="hamoodibn@gmail.com">
+                        </div>
+                        <div class="input-groub">
+                          <label>How can we help you</label> <input type="text" placeholder="Put your quatoin here">
+                        </div>
+                      </div><label>Message</label> 
+                      <textarea rows="5" placeholder="Your Message"></textarea> <button type="submit">SEND</button>
+                    </form>
+                  </div>
+                  <div class="contact-right">
+                    <h6>Reach Us</h6>
+                    <table>
+                      <tr>
+                        <td><i class="fa-regular fa-envelope"></i>:</td>
+                        <td>hamoodibn@gmail.com</td>
+                      </tr>
+                      <tr>
+                        <td><i class="fa-solid fa-location-dot"></i>:</td>
+                        <td>3024EL westzeedijk 559 , ROTTERDAM</td>
+                      </tr>
+                      <tr>
+                        <td><i class="fa-solid fa-phone-volume"></i>:</td>
+                        <td>0684172712</td>
+                      </tr>
+                      <tr>
+                        <td><i class="fa-brands fa-instagram"></i>:</td>
+                        <td>bannawii</td>
+                      </tr>
+                      <tr>
+                        <td><i class="fa-brands fa-facebook"></i>:</td>
+                        <td>mhmeeeed</td>
+                      </tr>
+                    </table>
+                  </div>
+                </div>
+              </div>
+                                       
+                                        
+                                        <hr>
+  
+    <footer>
+                              <div class="footer">
+&nbsp;&nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;&nbsp;   <div class="col-1">
+     <h6 id="footer-socotra">SOCOTRA</h6>
+      <p id="footer-p">Copyright©2023</p>
+  </div>&nbsp; &nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;&nbsp; &nbsp; &nbsp;
+  <div class="col-2">
+    <h6 id="nw">NewsLetter</h6>
+    <form>
+      <input type="email" placeholder="Your Email Addres"required> <button type="submit">SUBSCRIBE NOW</button>
+    </form>
+      </div>&nbsp;  &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp;
+    <div class="col-3">
+      <h6 id="src">SOURCES</h6><a href="https://en.wikipedia.org/wiki/Socotra#">WIKIPEDIA</a> <br>
+    <a href="https://www.avenlylanetravel.com/things-to-do-in-socotra/">AVENLY LANE TRAVEL</a> <br>
+    <a href="https://www.welcometosocotra.com/">WELCOM TO SOCOTRA</a><br>
+    </div>
+</div>
+      <footer>
+  </body>          
+</html>
